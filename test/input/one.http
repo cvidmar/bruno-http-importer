@@ -1,0 +1,7 @@
+POST https://www.example.com/one
+Cookie: session=1234567890
+Content-Type: application/json
+
+{
+  "foo": "bar"
+}

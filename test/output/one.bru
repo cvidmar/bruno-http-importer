@@ -1,0 +1,21 @@
+meta {
+  name: one
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://www.example.com/one
+  body: json
+}
+
+headers {
+  Cookie: session=1234567890
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "foo": "bar"
+  }
+}

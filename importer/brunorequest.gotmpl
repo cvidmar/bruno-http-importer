@@ -1,0 +1,18 @@
+meta {
+  name: {{.Meta.Name}}
+  type: http
+  seq: {{.Meta.Seq}}
+}
+
+{{.Meta.Verb}} {
+  url: {{.Call.Url}}
+  body: {{.Body.Mode}}
+}
+{{ if .Headers }}
+headers {{"{"}}{{range .Headers}}
+  {{.}}{{end}}
+}{{end}}
+{{ if ne .Body.Mode "none" }}
+body:{{.Body.Mode}} {{"{"}}{{range .Body.Raw}}
+  {{.}}{{end}}
+}{{end}}
